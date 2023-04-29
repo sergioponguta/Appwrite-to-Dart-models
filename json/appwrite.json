@@ -1,0 +1,1115 @@
+{
+  "projectId": "test",
+  "projectName": "TEST",
+  "collections": [
+    {
+      "$id": "paises",
+      "$createdAt": "2023-04-27T16:11:07.400446+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.400446+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "PAISES",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_pais",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_pais",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_PAISES_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_pais"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "departamentos",
+      "$createdAt": "2023-04-27T16:11:07.400446+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.400446+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "DEPARTAMENTOS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_departamento",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_departamento",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 50
+        },
+        {
+          "key": "id_pais",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_DEPARTAMENTOS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_departamento"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "ciudades",
+      "$createdAt": "2023-04-27T16:11:07.401473+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.401473+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "CIUDADES",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_ciudad",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_ciudad",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 50
+        },
+        {
+          "key": "id_departamento",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_CIUDADES_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_ciudad"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "empresas",
+      "$createdAt": "2023-04-27T16:11:07.401473+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.401473+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "EMPRESAS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_empresa",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_empresa",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 50
+        },
+        {
+          "key": "nit_empresa",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "direccion_empresa",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 50
+        },
+        {
+          "key": "telefono_empresa",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "email_empresa",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 50
+        },
+        {
+          "key": "id_ciudad",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_EMPRESAS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_empresa"],
+          "orders": ["DESC"]
+        },
+        {
+          "key": "IDX_EMPRESAS_UQ_NIT_EMPRESA",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["nit_empresa"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "sedes",
+      "$createdAt": "2023-04-27T16:11:07.401473+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.401473+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "SEDES",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_sede",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_sede",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 50
+        },
+        {
+          "key": "direccion_sede",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 50
+        },
+        {
+          "key": "telefono_sede",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "id_ciudad",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "id_empresa",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_SEDES_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_sede"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "roles",
+      "$createdAt": "2023-04-27T16:11:07.401473+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.401473+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "ROLES",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_rol",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_rol",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "descripcion_rol",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 255
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_ROLES_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_rol"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "cargos",
+      "$createdAt": "2023-04-27T16:11:07.401473+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.401473+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "CARGOS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_cargo",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_cargo",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "descripcion_cargo",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 255
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_CARGOS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_cargo"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "personas",
+      "$createdAt": "2023-04-27T16:11:07.401473+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.401473+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "PERSONAS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_persona",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "identificacion_persona",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "tipo_identificacion_persona",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "format": "enum",
+          "elements": ["CEDULA", "EXTRANJERIA", "PASAPORTE"]
+        },
+        {
+          "key": "primer_nombre_persona",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "segundo_nombre_persona",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "primer_apellido_persona",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "segundo_apellido_persona",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "telefono_persona",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "email_persona",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 50
+        },
+        {
+          "key": "direccion_persona",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "fecha_nacimiento_persona",
+          "type": "datetime",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "format": ""
+        },
+        {
+          "key": "fecha_registro_persona",
+          "type": "datetime",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "format": ""
+        },
+        {
+          "key": "id_ciudad",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "id_rol",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "id_empresa",
+          "type": "integer",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "id_cargo",
+          "type": "integer",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_PERSONAS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_persona"],
+          "orders": ["DESC"]
+        },
+        {
+          "key": "IDX_PERSONAS_UQ_IDENTIFICACION_PERS",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["identificacion_persona"],
+          "orders": ["DESC"]
+        },
+        {
+          "key": "IDX_PERSONAS_UQ_EMAIL_PERSONA",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["email_persona"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "datos_biometricos",
+      "$createdAt": "2023-04-27T16:11:07.401473+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.401473+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "DATOS_BIOMETRICOS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_dato_biometrico",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "huella_digital_persona",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 5000
+        },
+        {
+          "key": "firma_persona",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 5000
+        },
+        {
+          "key": "foto_persona",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 5000
+        },
+        {
+          "key": "id_persona",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_DATOS_BIOMETRICOS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_dato_biometrico"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "usuarios",
+      "$createdAt": "2023-04-27T16:11:07.402475+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.402475+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "USUARIOS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_usuario",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_usuario",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "contrasena_usuario",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "id_persona",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_USUARIOS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_usuario"],
+          "orders": ["DESC"]
+        },
+        {
+          "key": "IDX_USUARIOS_UQ_NOMBRE_USUARIO",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["nombre_usuario"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "tipos_soportes_fisicos",
+      "$createdAt": "2023-04-27T16:11:07.402475+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.402475+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "TIPOS_SOPORTES_FISICOS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_tipo_soporte_fisico",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "nombre_tipo_soporte_fisico",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 30
+        },
+        {
+          "key": "descripcion_tipo_soporte_fisico",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 255
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_TIPOS_SOPORTES_FISICOS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_tipo_soporte_fisico"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "soportes_fisicos",
+      "$createdAt": "2023-04-27T16:11:07.402475+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.402475+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "SOPORTES_FISICOS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_soporte_fisico",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "url_soporte_fisico",
+          "type": "string",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "size": 500
+        },
+        {
+          "key": "id_tipo_soporte_fisico",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "id_pre_registro",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_SOPORTES_FISICOS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_soporte_fisico"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "pre_registros_personas",
+      "$createdAt": "2023-04-27T16:11:07.402475+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.402475+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "PRE_REGISTROS_PERSONAS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_pre_registro",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "fecha_pre_registro",
+          "type": "datetime",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "format": ""
+        },
+        {
+          "key": "id_persona",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_PRE_REGISTROS_PERSONAS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_pre_registro"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "registros_personas",
+      "$createdAt": "2023-04-27T16:11:07.402475+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.402475+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "REGISTROS_PERSONAS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_registro",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "fecha_registro",
+          "type": "datetime",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "format": ""
+        },
+        {
+          "key": "id_pre_registro",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_REGISTROS_PERSONAS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_registro"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "visitas",
+      "$createdAt": "2023-04-27T16:11:07.402475+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.402475+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "VISITAS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_visita",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "fecha_visita",
+          "type": "datetime",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "format": ""
+        },
+        {
+          "key": "hora_inicio_visita",
+          "type": "datetime",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "format": ""
+        },
+        {
+          "key": "id_firma_inicio_visita",
+          "type": "integer",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "hora_fin_visita",
+          "type": "datetime",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "format": ""
+        },
+        {
+          "key": "id_firma_fin_visita",
+          "type": "integer",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "id_sede",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "id_registro",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_VISITAS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_visita"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "servicios_visitas",
+      "$createdAt": "2023-04-27T16:11:07.402475+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.402475+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "SERVICIOS_VISITAS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_servicio_visita",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "descripcion_servicio",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "default": null,
+          "size": 1000
+        },
+        {
+          "key": "id_visita",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_SERVICIOS_VISITAS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_servicio_visita"],
+          "orders": ["DESC"]
+        }
+      ]
+    },
+    {
+      "$id": "firmas_biometricas_visitas",
+      "$createdAt": "2023-04-27T16:11:07.403447+00:00",
+      "$updatedAt": "2023-04-27T16:11:07.403447+00:00",
+      "$permissions": [],
+      "databaseId": "test_db",
+      "name": "FIRMAS_BIOMETRICAS_VISITAS",
+      "enabled": true,
+      "attributes": [
+        {
+          "key": "id_firma_biometrica_visita",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        },
+        {
+          "key": "id_datos_biometricos",
+          "type": "integer",
+          "status": "available",
+          "required": true,
+          "array": false,
+          "default": null,
+          "min": -9223372036854775808,
+          "max": 9223372036854775807
+        }
+      ],
+      "indexes": [
+        {
+          "key": "IDX_FIRMAS_BIOMETRICAS_VISITAS_PK",
+          "type": "unique",
+          "status": "available",
+          "attributes": ["id_firma_biometrica_visita"],
+          "orders": ["DESC"]
+        }
+      ]
+    }
+  ]
+}
