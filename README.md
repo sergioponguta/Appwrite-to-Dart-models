@@ -12,7 +12,7 @@ It will iterates over every collection in that file an produce a new file with t
 
 ### **Input:**
 
-Just put your `appwrite.json` file in the `json` folder and run the function. You will get the `dart` files with the models in the `dart` folder.
+Just put your `appwrite.json` file in the `json` folder and run the `main.py` function. You will get the `dart` files with the models in the `dart` folder.
 
 **Expected format** (Just a normal `appwrite.json` file):
 
