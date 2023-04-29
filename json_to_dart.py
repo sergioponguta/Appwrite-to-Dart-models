@@ -32,11 +32,7 @@ def json_to_dart(json_to_convert):
         write_dart_file(json_dict["name"].lower() + "_model.dart", dart_content)
 
 
-def main():
+def start_process():
     list_json_files = open_json_files_content()
     for json_file in list_json_files:
         json_to_dart(json_file)
-
-
-if __name__ == "__main__":
-    main()
