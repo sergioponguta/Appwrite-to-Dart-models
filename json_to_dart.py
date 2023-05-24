@@ -27,7 +27,7 @@ def json_to_dart(json_to_convert):
     json_dict_collections = json.loads(json_to_convert)["collections"]
     for json_dict in json_dict_collections:
         class_name = generate_class_name(json_dict)
-        dart_content = json_to_dart_string(class_name, json_dict)
+        dart_content = json_to_dart_string(class_name, dict_attributes_plus_id(json_dict))
 
         write_dart_file(json_dict["name"].lower() + "_model.dart", dart_content)
 

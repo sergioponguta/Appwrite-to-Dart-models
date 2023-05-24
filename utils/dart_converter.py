@@ -35,6 +35,12 @@ def generate_attributes_snakecase(json_dict):
     return attributes_snakecase
 
 
+def dict_attributes_plus_id(json_dict):
+    attributes = json_dict["attributes"]
+    attributes.insert(0, {"key": "id", "type": "string"})
+    return json_dict
+
+
 def generate_import():
     return "import 'dart:convert';"
 
@@ -94,8 +100,12 @@ def generate_from_map(class_name, attributes_snakecase):
         ".fromMap(Map<String, dynamic> map) {" + "\n"
     aux += "    return " + class_name + "(" + "\n"
     for attribute in attributes_snakecase:
-        aux += "      " + to_lower_camel_case(attribute["key"]) + ": map['" + \
-            attribute["key"] + "']," + "\n"
+        if to_lower_camel_case(attribute["key"]) == "id":
+            aux += "      " + to_lower_camel_case(attribute["key"]) + ": map['\$" + \
+                attribute["key"] + "'].toString()," + "\n"
+        else:
+            aux += "      " + to_lower_camel_case(attribute["key"]) + ": map['" + \
+                attribute["key"] + "']," + "\n"
     aux += "    );" + "\n"
     aux += "  }" + "\n"
     return aux + "\n"
